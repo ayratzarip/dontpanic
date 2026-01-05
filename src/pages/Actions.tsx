@@ -107,34 +107,20 @@ export default function Actions() {
         {/* Tip Modal */}
         {showTip && (
           <div className="mt-4 rounded-xl bg-white dark:bg-surface-dark p-4 shadow-lg border border-slate-200 dark:border-border-dark animate-fade-in">
-            <h3 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">Эффективные копинг-стратегии</h3>
-            <p className="text-slate-600 dark:text-slate-300 mb-3 text-sm font-medium">
-              Техники управления дыханием:
+            <h3 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">Примеры действий</h3>
+            <p className="text-slate-600 dark:text-slate-300 mb-3 text-sm">
+              Опишите любые действия, которые Вы предприняли:
             </p>
             <ul className="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-300 mb-3">
-              <li>Дыхание 4-7-8 (вдох 4 сек, задержка 7 сек, выдох 8 сек)</li>
-              <li>Дыхание животом (диафрагмальное дыхание)</li>
-              <li>Медленное глубокое дыхание</li>
-            </ul>
-            <p className="text-slate-600 dark:text-slate-300 mb-3 text-sm font-medium">
-              Техники заземления (grounding):
-            </p>
-            <ul className="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-300 mb-3">
-              <li>Метод 5-4-3-2-1 (5 вещей, которые вижу, 4 - слышу, 3 - ощущаю и т.д.)</li>
-              <li>Подробное описание окружающих предметов</li>
-              <li>Физический контакт (потрогать холодную воду, сжать кулаки)</li>
-            </ul>
-            <p className="text-slate-600 dark:text-slate-300 mb-3 text-sm font-medium">
-              Другие стратегии:
-            </p>
-            <ul className="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-300 mb-3">
-              <li>Напоминание себе "это паника, она пройдет, я в безопасности"</li>
-              <li>Звонок близкому человеку</li>
-              <li>Выход на свежий воздух</li>
-              <li>Ведение дневника (то, что вы сейчас делаете!)</li>
+              <li>Позвонили близкому человеку</li>
+              <li>Вышли на свежий воздух</li>
+              <li>Сели или легли</li>
+              <li>Выпили воды</li>
+              <li>Пытались контролировать дыхание</li>
+              <li>Просто ждали окончания приступа</li>
             </ul>
             <p className="text-slate-600 dark:text-slate-300 text-sm">
-              <strong>Важно:</strong> Запишите максимально подробно, что именно вы делали - это само по себе полезная практика осознанности.
+              <strong>Важно:</strong> Запишите только факты. Это поможет терапевту понять, как Вы реагируете на панику.
             </p>
             <button
               onClick={() => setShowTip(false)}

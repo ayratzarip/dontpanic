@@ -247,7 +247,7 @@ export default function EntryView() {
               value={currentEntry.actions}
               onChange={(e) => updateCurrentEntry('actions', e.target.value)}
               className="w-full min-h-[100px] bg-transparent text-base text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 resize-none border-none outline-none focus:ring-0 p-0"
-              placeholder="Что вы делали, чтобы справиться с паникой..."
+              placeholder="Что Вы делали, чтобы справиться с паникой..."
             />
           </div>
         </div>

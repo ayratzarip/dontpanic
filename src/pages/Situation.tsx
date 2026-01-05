@@ -269,7 +269,7 @@ export default function Situation() {
               </h1>
             </div>
             <p className="text-base font-normal leading-relaxed text-slate-600 dark:text-slate-300 pb-6">
-              Что предшествовало возникновению тревоги? Опишите Ваш общий эмоциональный и физический фон, события, которые могли повлиять.
+              Что предшествовало возникновению тревоги? Опишите максимально подробно Ваш общий эмоциональный и физический фон, события, которые могли повлиять.
             </p>
             <div className="relative flex-1 min-h-[160px] flex flex-col">
               <label className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
