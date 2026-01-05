@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #137fec;
+  --color-primary-dark: #0f6bd0;
+  --color-background-light: #f6f7f8;
+  --color-background-dark: #101922;
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #1e2936;
+  --color-surface-dark-alt: #233648;
+  --color-border-dark: #324d67;
+  --color-text-secondary: #92adc9;
+  --font-family-display: "Inter", sans-serif;
+}
+
+:root {
+  font-family: var(--font-family-display);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--tg-theme-bg-color, var(--color-background-dark));
+  color: var(--tg-theme-text-color, #ffffff);
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for clean mobile UI */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom scrollbar for textareas */
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-dark);
+  border-radius: 3px;
+}
+
+/* Material Symbols defaults */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Telegram theme color variables fallback */
+:root {
+  --tg-theme-bg-color: var(--color-background-dark);
+  --tg-theme-text-color: #ffffff;
+  --tg-theme-hint-color: var(--color-text-secondary);
+  --tg-theme-link-color: var(--color-primary);
+  --tg-theme-button-color: var(--color-primary);
+  --tg-theme-button-text-color: #ffffff;
+  --tg-theme-secondary-bg-color: var(--color-surface-dark);
+}
+
+/* Light theme support */
+.light {
+  --tg-theme-bg-color: var(--color-background-light);
+  --tg-theme-text-color: #1f2937;
+  --tg-theme-secondary-bg-color: var(--color-surface-light);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Details animation */
+details[open] summary ~ * {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Remove default marker */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
