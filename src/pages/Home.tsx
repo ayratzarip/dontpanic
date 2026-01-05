@@ -133,7 +133,7 @@ ${entry.tags.length > 0 ? `Теги: ${entry.tags.join(', ')}` : ''}
 
     hapticFeedback('light');
 
-    const prompt = `Ты - опытный психотерапевт, специализирующийся на когнитивно-поведенческой терапии, помогающий пациенту с паническим расстройством. Пациент ведет дневник самонаблюдения в приложении "DontPanic" для отслеживания эпизодов тревоги и панических атак. Результаты анализа будут использованы на сеансах психотерапии.
+    const prompt = `Ты - опытный психотерапевт, специализирующийся на когнитивно-поведенческой терапии, помогающий пациенту с паническим расстройством. Пациент ведет дневник самонаблюдения в приложении "Don't Panic!" для отслеживания эпизодов тревоги и панических атак. Результаты анализа будут использованы на сеансах психотерапии.
 
 Твои задачи:
 1. Выяви триггеры и паттерны, которые провоцируют тревогу и панические атаки.
@@ -177,7 +177,7 @@ ${entries.map((entry, index) => formatEntryForAI(entry, index)).join('\n')}
         <div className="max-w-lg mx-auto w-full pt-2 pb-2 px-4">
           <div className="flex items-center justify-between h-14">
             <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
-              DontPanic
+              Don't Panic!
             </h1>
             <button
               onClick={handleOpenInstructions}
