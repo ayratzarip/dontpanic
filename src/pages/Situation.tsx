@@ -145,7 +145,7 @@ export default function Situation() {
               </h1>
             </div>
             <p className="text-base font-normal leading-relaxed text-slate-600 dark:text-slate-300 pb-6">
-              Где Вы находились в момент возникновения тяги? Окружающая обстановка может быть важным фактором.
+              Где Вы находились, когда начали ощущать тревогу или панику? Окружающая обстановка может быть важным фактором.
             </p>
             <div className="relative flex-1 min-h-[160px] flex flex-col">
               <label className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
@@ -202,7 +202,7 @@ export default function Situation() {
               </h1>
             </div>
             <p className="text-base font-normal leading-relaxed text-slate-600 dark:text-slate-300 pb-4">
-              Были ли Вы одни или в компании? Социальный контекст часто влияет на наше состояние.
+              Были ли Вы одни или в компании? Социальный контекст часто влияет на уровень тревоги.
             </p>
 
             <button
@@ -218,12 +218,12 @@ export default function Situation() {
               <div className="mb-6 rounded-xl bg-white dark:bg-surface-dark p-4 shadow-lg border border-slate-200 dark:border-border-dark animate-fade-in">
                 <h3 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">Влияние окружения</h3>
                 <p className="text-slate-600 dark:text-slate-300 mb-3 text-sm">
-                  Разные ситуации могут по-разному провоцировать желание играть:
+                  Разные ситуации могут по-разному влиять на уровень тревоги:
                 </p>
                 <ul className="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-300 mb-3">
-                  <li><strong>В одиночестве:</strong> часто триггером становится скука, грусть или чувство свободы ("никто не увидит").</li>
-                  <li><strong>С друзьями/знакомыми:</strong> социальное давление, разговоры о ставках, желание "быть как все".</li>
-                  <li><strong>В толпе:</strong> стресс или дискомфорт, от которых хочется "убежать" в игру.</li>
+                  <li><strong>В одиночестве:</strong> может усиливаться тревога из-за отсутствия поддержки, повышенной концентрации на телесных ощущениях.</li>
+                  <li><strong>С друзьями/знакомыми:</strong> страх осуждения, необходимость скрывать свое состояние может усиливать панику.</li>
+                  <li><strong>В толпе:</strong> ощущение "ловушки", невозможность быстро уйти, духота могут провоцировать паническую атаку.</li>
                 </ul>
                 <button
                   onClick={() => setShowTip(false)}
@@ -269,7 +269,7 @@ export default function Situation() {
               </h1>
             </div>
             <p className="text-base font-normal leading-relaxed text-slate-600 dark:text-slate-300 pb-6">
-              Что предшествовало возникновению тяги? Опишите Ваш общий эмоциональный фон или события, которые могли повлиять.
+              Что предшествовало возникновению тревоги? Опишите Ваш общий эмоциональный и физический фон, события, которые могли повлиять.
             </p>
             <div className="relative flex-1 min-h-[160px] flex flex-col">
               <label className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
@@ -323,7 +323,7 @@ export default function Situation() {
               </h1>
             </div>
             <p className="text-base font-normal leading-relaxed text-slate-600 dark:text-slate-300 pb-6">
-              Постарайтесь определить конкретный момент, событие или мысль, которые запустили желание играть.
+              Постарайтесь определить конкретный момент, событие, ощущение или мысль, которые запустили тревогу или паническую атаку.
             </p>
             <div className="relative flex-1 min-h-[160px] flex flex-col">
               <label className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
@@ -334,7 +334,7 @@ export default function Situation() {
                   value={currentEntry.trigger}
                   onChange={(e) => updateCurrentEntry('trigger', e.target.value)}
                   className="w-full h-full min-h-[180px] p-4 rounded-xl bg-white dark:bg-surface-dark border-2 border-transparent focus:border-primary/50 focus:ring-0 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 resize-none transition-all shadow-sm"
-                  placeholder="Например: увидел рекламу казино, пришло SMS от букмекера, друг рассказал о выигрыше, мысль 'мне повезет'..."
+                  placeholder="Например: почувствовал учащенное сердцебиение, увидел замкнутое пространство, вспомнил прошлую паническую атаку, мысль 'со мной что-то не так'..."
                 />
                 <div className="absolute bottom-4 right-4 z-10">
                   <button
@@ -353,9 +353,9 @@ export default function Situation() {
               <div className="mt-4 rounded-xl bg-white dark:bg-surface-dark p-4 shadow-lg border border-slate-200 dark:border-border-dark animate-fade-in">
                 <h3 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">Что может быть триггером?</h3>
                 <ul className="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-300 mb-3">
-                  <li><strong>Внешние:</strong> реклама, вывески, SMS-уведомления, просмотр спорта, разговоры других людей.</li>
-                  <li><strong>Финансовые:</strong> необходимость отдать долг, получение денег, нехватка средств.</li>
-                  <li><strong>Внутренние:</strong> внезапное воспоминание о выигрыше, фантазия об успехе, скука, желание "быстрых денег".</li>
+                  <li><strong>Телесные:</strong> учащенное сердцебиение, головокружение, ощущение нехватки воздуха, дрожь.</li>
+                  <li><strong>Ситуационные:</strong> замкнутое пространство (лифт, метро), толпа, необходимость выступать публично.</li>
+                  <li><strong>Когнитивные:</strong> воспоминание о прошлой панической атаке, катастрофическая интерпретация телесных ощущений, мысль "я не справлюсь".</li>
                 </ul>
                 <button
                   onClick={() => setShowTip(false)}

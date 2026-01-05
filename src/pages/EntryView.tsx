@@ -202,7 +202,7 @@ export default function EntryView() {
               value={currentEntry.trigger}
               onChange={(e) => updateCurrentEntry('trigger', e.target.value)}
               className="w-full min-h-[80px] bg-transparent text-base text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 resize-none border-none outline-none focus:ring-0 p-0"
-              placeholder="Что запустило мысли об игре..."
+              placeholder="Что запустило тревогу или паническую атаку..."
             />
           </div>
 
@@ -247,7 +247,7 @@ export default function EntryView() {
               value={currentEntry.actions}
               onChange={(e) => updateCurrentEntry('actions', e.target.value)}
               className="w-full min-h-[100px] bg-transparent text-base text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 resize-none border-none outline-none focus:ring-0 p-0"
-              placeholder="Ваша реакция на тягу..."
+              placeholder="Что вы делали, чтобы справиться с паникой..."
             />
           </div>
         </div>

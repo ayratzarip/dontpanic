@@ -66,7 +66,7 @@ export default function BodyFeelings() {
 
         {/* Description */}
         <p className="text-base font-normal leading-relaxed text-slate-600 dark:text-slate-300 pb-6">
-          Тяга к игре часто отражается в теле. Попробуйте заметить напряжение, учащенное сердцебиение или другие сигналы организма.
+          Паническая атака всегда сопровождается телесными ощущениями. Чем подробнее Вы опишете их, тем лучше - это помогает переключить внимание и осознать, что с телом на самом деле происходит.
         </p>
 
         {/* Text Input Area */}
@@ -79,7 +79,7 @@ export default function BodyFeelings() {
               value={currentEntry.bodyFeelings}
               onChange={(e) => updateCurrentEntry('bodyFeelings', e.target.value)}
               className="w-full h-full min-h-[180px] p-4 rounded-xl bg-white dark:bg-surface-dark border-2 border-transparent focus:border-primary/50 focus:ring-0 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 resize-none transition-all shadow-sm"
-              placeholder="Например: учащенное сердцебиение, напряжение в груди, ком в горле, дрожь, потливость..."
+              placeholder="Например: сильное сердцебиение, трудно дышать, головокружение, дрожь в руках, потливость, онемение конечностей, тошнота, ощущение нереальности происходящего..."
             />
             {/* Helper Button */}
             <div className="absolute bottom-4 right-4 z-10">
@@ -97,17 +97,21 @@ export default function BodyFeelings() {
         {/* Tip Modal */}
         {showTip && (
           <div className="mt-4 rounded-xl bg-white dark:bg-surface-dark p-4 shadow-lg border border-slate-200 dark:border-border-dark animate-fade-in">
-            <h3 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">Примеры телесных ощущений</h3>
+            <h3 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">Типичные симптомы панической атаки</h3>
             <p className="text-slate-600 dark:text-slate-300 mb-3 text-sm">
-              При желании играть часто возникают:
+              При панике обычно возникают:
             </p>
-            <ul className="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-300">
-              <li>Учащенное сердцебиение, волнение</li>
-              <li>Напряжение в груди или животе</li>
-              <li>Дрожь в руках, потливость</li>
-              <li>Ощущение жара или холода</li>
-              <li>Сжатие в горле, трудно дышать</li>
+            <ul className="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-300 mb-3">
+              <li><strong>Сердечно-сосудистые:</strong> учащенное сердцебиение, боль в груди, пульсация</li>
+              <li><strong>Дыхательные:</strong> нехватка воздуха, удушье, учащенное дыхание</li>
+              <li><strong>Неврологические:</strong> головокружение, предобморочное состояние, онемение</li>
+              <li><strong>Вегетативные:</strong> потливость, дрожь, озноб или жар</li>
+              <li><strong>Желудочно-кишечные:</strong> тошнота, дискомфорт в животе</li>
+              <li><strong>Психические:</strong> дереализация, деперсонализация</li>
             </ul>
+            <p className="text-slate-600 dark:text-slate-300 text-sm">
+              <strong>Важно:</strong> Чем детальнее вы опишете ощущения (где, какие, насколько сильные), тем эффективнее работает техника отвлечения внимания.
+            </p>
             <button
               onClick={() => setShowTip(false)}
               className="w-full py-2.5 rounded-lg bg-slate-200 dark:bg-surface-dark-alt font-medium text-slate-900 dark:text-white hover:bg-slate-300 dark:hover:bg-border-dark transition-colors"

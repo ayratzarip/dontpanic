@@ -13,7 +13,7 @@ import {
 function App() {
   return (
     <AppProvider>
-      <BrowserRouter basename="/AntiBet">
+      <BrowserRouter basename="/dontpanic">
         <div className="min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display">
           <Routes>
             {/* 1. Мои записи - Домашняя страница */}
@@ -25,7 +25,7 @@ function App() {
             {/* 3. Контекст: Место, Свидетели, Обстоятельства, Триггер */}
             <Route path="/situation" element={<Situation />} />
 
-            {/* 4. Мысли об игре */}
+            {/* 4. Тревожные мысли */}
             <Route path="/thoughts" element={<Thoughts />} />
 
             {/* 5. Телесные ощущения */}

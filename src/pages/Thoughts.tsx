@@ -68,7 +68,7 @@ export default function Thoughts() {
 
         {/* Description */}
         <p className="text-base font-normal leading-relaxed text-slate-600 dark:text-slate-300 pb-6">
-          О чем Вы подумали в этот момент? Постарайтесь просто зафиксировать поток мыслей, не осуждая себя.
+          О чем Вы подумали в момент тревоги? Запишите свои мысли максимально подробно, как они приходили - это поможет переключить внимание и осознать паттерны мышления.
         </p>
 
         {/* Text Input Area */}
@@ -81,7 +81,7 @@ export default function Thoughts() {
               value={currentEntry.thoughts}
               onChange={(e) => updateCurrentEntry('thoughts', e.target.value.slice(0, maxChars))}
               className="w-full h-full min-h-[180px] p-4 rounded-xl bg-white dark:bg-surface-dark border-2 border-transparent focus:border-primary/50 focus:ring-0 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 resize-none transition-all shadow-sm"
-              placeholder="Например: 'хочу только попробовать', 'надо срочно найти деньги', 'вспомнил чувство победы', 'ругаю себя за слабость'..."
+              placeholder="Например: 'у меня сердечный приступ', 'я сейчас умру', 'я сойду с ума', 'со мной что-то не так', 'я не смогу выбраться отсюда', 'все заметят мое состояние'..."
             />
             {/* Helper Button */}
             <div className="absolute bottom-4 right-4 z-10">
@@ -99,13 +99,16 @@ export default function Thoughts() {
         {/* Tip Modal */}
         {showTip && (
           <div className="mt-4 rounded-xl bg-white dark:bg-surface-dark p-4 shadow-lg border border-slate-200 dark:border-border-dark animate-fade-in">
-            <h3 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">Частые мысли</h3>
+            <h3 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">Типичные тревожные мысли при панике</h3>
             <p className="text-slate-600 dark:text-slate-300 mb-3 text-sm">
-              • "Только один раз, и всё"
-              <br/>• "Мне нужно отыграться"
-              <br/>• "Сегодня точно повезет"
-              <br/>• "Я неудачник, всё равно уже всё потерял"
-              <br/>• "Как отдать долги? Только игрой"
+              • "У меня сердечный приступ / инсульт"
+              <br/>• "Я сейчас потеряю сознание / умру"
+              <br/>• "Я схожу с ума / теряю контроль"
+              <br/>• "Мне не хватает воздуха, я задохнусь"
+              <br/>• "Все видят, что со мной что-то не так"
+              <br/>• "Я не смогу выбраться отсюда / убежать"
+              <br/><br/>
+              <strong>Подробно опишите свои мысли</strong> - чем детальнее запись, тем больше вы переключаете внимание от телесных ощущений на процесс описания.
             </p>
             <button
               onClick={() => setShowTip(false)}

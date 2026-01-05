@@ -76,7 +76,7 @@ export default function Actions() {
 
         {/* Description */}
         <p className="text-base font-normal leading-relaxed text-slate-600 dark:text-slate-300 pb-6">
-          Как Вы справляетесь с возникшим желанием? Опишите, что Вы сделали, чтобы не поддаться импульсу, или как планируете поступить.
+          Что Вы делаете или сделали, чтобы справиться с паникой? Подробно опишите свои действия - сам процесс описания уже помогает снизить тревогу.
         </p>
 
         {/* Text Input Area */}
@@ -89,7 +89,7 @@ export default function Actions() {
               value={currentEntry.actions}
               onChange={(e) => updateCurrentEntry('actions', e.target.value)}
               className="w-full h-full min-h-[180px] p-4 rounded-xl bg-white dark:bg-surface-dark border-2 border-transparent focus:border-primary/50 focus:ring-0 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 resize-none transition-all shadow-sm"
-              placeholder="Например: пытаюсь отвлечься на работу, запрещаю себе думать об этом, звоню другу, иду гулять..."
+              placeholder="Например: делаю дыхательные упражнения, описываю окружающие предметы, пью воду, повторяю успокаивающие фразы, звоню близкому человеку, выхожу на свежий воздух..."
             />
             {/* Helper Button */}
             <div className="absolute bottom-4 right-4 z-10">
@@ -107,16 +107,35 @@ export default function Actions() {
         {/* Tip Modal */}
         {showTip && (
           <div className="mt-4 rounded-xl bg-white dark:bg-surface-dark p-4 shadow-lg border border-slate-200 dark:border-border-dark animate-fade-in">
-            <h3 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">Примеры действий</h3>
+            <h3 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">Эффективные копинг-стратегии</h3>
+            <p className="text-slate-600 dark:text-slate-300 mb-3 text-sm font-medium">
+              Техники управления дыханием:
+            </p>
             <ul className="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-300 mb-3">
-              <li>Пытаюсь отвлечься на работу или хобби</li>
-              <li>Запрещаю себе думать об этом</li>
-              <li>Звоню другу или близкому человеку</li>
-              <li>Иду на прогулку или в спортзал</li>
-              <li>Делаю дыхательные упражнения</li>
-              <li>Записываю мысли в дневник</li>
-              <li>Читаю мотивирующие материалы</li>
+              <li>Дыхание 4-7-8 (вдох 4 сек, задержка 7 сек, выдох 8 сек)</li>
+              <li>Дыхание животом (диафрагмальное дыхание)</li>
+              <li>Медленное глубокое дыхание</li>
             </ul>
+            <p className="text-slate-600 dark:text-slate-300 mb-3 text-sm font-medium">
+              Техники заземления (grounding):
+            </p>
+            <ul className="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-300 mb-3">
+              <li>Метод 5-4-3-2-1 (5 вещей, которые вижу, 4 - слышу, 3 - ощущаю и т.д.)</li>
+              <li>Подробное описание окружающих предметов</li>
+              <li>Физический контакт (потрогать холодную воду, сжать кулаки)</li>
+            </ul>
+            <p className="text-slate-600 dark:text-slate-300 mb-3 text-sm font-medium">
+              Другие стратегии:
+            </p>
+            <ul className="list-disc pl-5 space-y-1 text-sm text-slate-600 dark:text-slate-300 mb-3">
+              <li>Напоминание себе "это паника, она пройдет, я в безопасности"</li>
+              <li>Звонок близкому человеку</li>
+              <li>Выход на свежий воздух</li>
+              <li>Ведение дневника (то, что вы сейчас делаете!)</li>
+            </ul>
+            <p className="text-slate-600 dark:text-slate-300 text-sm">
+              <strong>Важно:</strong> Запишите максимально подробно, что именно вы делали - это само по себе полезная практика осознанности.
+            </p>
             <button
               onClick={() => setShowTip(false)}
               className="w-full py-2.5 rounded-lg bg-slate-200 dark:bg-surface-dark-alt font-medium text-slate-900 dark:text-white hover:bg-slate-300 dark:hover:bg-border-dark transition-colors"
