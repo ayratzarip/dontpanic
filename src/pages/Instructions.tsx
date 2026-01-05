@@ -174,24 +174,26 @@ export default function Instructions() {
     <div className="min-h-screen bg-background-light dark:bg-background-dark flex flex-col">
       {/* Header */}
       <div className="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-gray-800 transition-colors">
-        <div className="flex items-center justify-between p-4 h-14">
-          <button
-            onClick={handleBack}
-            className="flex size-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors"
-          >
-            <span className="material-symbols-outlined text-[24px] text-slate-900 dark:text-white">arrow_back</span>
-          </button>
-          <h2 className="text-slate-900 dark:text-white text-[17px] font-semibold leading-tight absolute left-1/2 -translate-x-1/2">
-            Инструкции
-          </h2>
-          <div className="w-12" />
+        <div className="max-w-lg mx-auto w-full">
+          <div className="flex items-center justify-between p-4 h-14">
+            <button
+              onClick={handleBack}
+              className="flex size-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors"
+            >
+              <span className="material-symbols-outlined text-[24px] text-slate-900 dark:text-white">arrow_back</span>
+            </button>
+            <h2 className="text-slate-900 dark:text-white text-[17px] font-semibold leading-tight absolute left-1/2 -translate-x-1/2">
+              Инструкции
+            </h2>
+            <div className="w-12" />
+          </div>
         </div>
       </div>
 
       {/* Main Content */}
       <main className="flex-1 overflow-y-auto no-scrollbar pb-24">
         {/* Search Bar */}
-        <div className="px-4 py-3">
+        <div className="max-w-lg mx-auto w-full px-4 py-3">
           <div className="relative flex w-full items-center rounded-xl bg-slate-200/50 dark:bg-surface-dark group focus-within:ring-2 focus-within:ring-primary/50 transition-all overflow-hidden">
             <div className="flex items-center justify-center pl-3 text-slate-500 dark:text-slate-400">
               <span className="material-symbols-outlined text-[20px]">search</span>
@@ -207,7 +209,7 @@ export default function Instructions() {
         </div>
 
         {/* Instructions Lists */}
-        <div className="px-4 space-y-6 pt-4">
+        <div className="max-w-lg mx-auto w-full px-4 space-y-6 pt-4">
           <InstructionGroup items={basicInstructions} />
           <InstructionGroup title="Что писать в описании" items={descriptionInstructions} />
           <InstructionGroup items={aiInstructions} />
@@ -222,12 +224,14 @@ export default function Instructions() {
 
       {/* Bottom Button */}
       <div className="fixed bottom-0 left-0 w-full p-4 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-t border-slate-200 dark:border-gray-800">
-        <button
-          onClick={handleUnderstood}
-          className="h-12 w-full rounded-xl bg-primary text-white font-semibold text-base shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all active:scale-[0.98] flex items-center justify-center"
-        >
-          Всё понятно
-        </button>
+        <div className="max-w-lg mx-auto w-full">
+          <button
+            onClick={handleUnderstood}
+            className="h-12 w-full rounded-xl bg-primary text-white font-semibold text-base shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all active:scale-[0.98] flex items-center justify-center"
+          >
+            Всё понятно
+          </button>
+        </div>
       </div>
     </div>
   );

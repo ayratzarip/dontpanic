@@ -115,21 +115,23 @@ export default function EntryView() {
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark flex flex-col">
       {/* Header */}
-      <header className="flex items-center justify-between p-4 pb-2 sticky top-0 z-20 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm">
-        <button
-          onClick={handleBack}
-          className="flex size-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors"
-        >
-          <span className="material-symbols-outlined text-[24px] text-slate-900 dark:text-white">arrow_back</span>
-        </button>
-        <h2 className="text-lg font-bold leading-tight tracking-tight text-center text-slate-900 dark:text-white truncate max-w-[200px]">
-          Редактирование
-        </h2>
-        <div className="size-10" />
+      <header className="sticky top-0 z-20 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-gray-800">
+        <div className="max-w-lg mx-auto w-full flex items-center justify-between p-4 pb-2">
+          <button
+            onClick={handleBack}
+            className="flex size-10 items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors"
+          >
+            <span className="material-symbols-outlined text-[24px] text-slate-900 dark:text-white">arrow_back</span>
+          </button>
+          <h2 className="text-lg font-bold leading-tight tracking-tight text-center text-slate-900 dark:text-white truncate max-w-[200px]">
+            Редактирование
+          </h2>
+          <div className="size-10" />
+        </div>
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col px-4 pb-32 pt-4">
+      <main className="flex-1 flex flex-col px-4 pb-32 pt-4 max-w-lg mx-auto w-full">
         <div className="space-y-0 rounded-xl overflow-hidden border border-slate-200 dark:border-border-dark bg-white dark:bg-surface-dark">
           {/* Дата и Время */}
           <div className="bg-slate-50 dark:bg-surface-dark-alt px-4 py-3 border-b border-slate-200 dark:border-border-dark">

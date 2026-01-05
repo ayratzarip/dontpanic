@@ -173,38 +173,40 @@ ${entries.map((entry, index) => formatEntryForAI(entry, index)).join('\n')}
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark flex flex-col">
       {/* Header */}
-      <header className="flex-none pt-2 pb-2 px-4 z-20 bg-background-light dark:bg-background-dark">
-        <div className="flex items-center justify-between h-14">
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
-            DontPanic
-          </h1>
-          <button 
-            onClick={handleOpenInstructions}
-            className="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors text-slate-900 dark:text-white"
-          >
-            <span className="material-symbols-outlined text-[28px]">help</span>
-          </button>
-        </div>
-        
-        {/* Search Bar */}
-        <div className="mt-1 mb-2">
-          <div className="relative w-full">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-text-secondary">
-              <span className="material-symbols-outlined">search</span>
+      <header className="sticky top-0 z-20 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-gray-800">
+        <div className="max-w-lg mx-auto w-full pt-2 pb-2 px-4">
+          <div className="flex items-center justify-between h-14">
+            <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+              DontPanic
+            </h1>
+            <button
+              onClick={handleOpenInstructions}
+              className="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-surface-dark transition-colors text-slate-900 dark:text-white"
+            >
+              <span className="material-symbols-outlined text-[28px]">help</span>
+            </button>
+          </div>
+
+          {/* Search Bar */}
+          <div className="mt-1 mb-2">
+            <div className="relative w-full">
+              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-text-secondary">
+                <span className="material-symbols-outlined">search</span>
+              </div>
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="block w-full h-11 pl-10 pr-4 text-base rounded-xl border-none bg-slate-200 dark:bg-surface-dark placeholder-text-secondary text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-shadow"
+                placeholder="Поиск по записям..."
+              />
             </div>
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="block w-full h-11 pl-10 pr-4 text-base rounded-lg border-none bg-slate-200 dark:bg-surface-dark placeholder-text-secondary text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:outline-none transition-shadow"
-              placeholder="Поиск по записям..."
-            />
           </div>
         </div>
       </header>
 
       {/* Content */}
-      <main className="flex-1 overflow-y-auto no-scrollbar px-4 pb-32">
+      <main className="flex-1 overflow-y-auto no-scrollbar px-4 pb-32 max-w-lg mx-auto w-full">
         {entries.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-64 text-center">
             <div className="flex items-center justify-center size-20 rounded-full bg-slate-200 dark:bg-surface-dark mb-4">
